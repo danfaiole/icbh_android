@@ -1,4 +1,4 @@
-package fms.android.icbh.Adapter
+package fms.android.icbh.Adapters
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
