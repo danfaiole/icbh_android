@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Discípulos em BH</string>
+    <string name="menu_home">Notícias</string>
+    <string name="menu_schedule">Agenda</string>
+    <string name="menu_videos">Vídeos</string>
+    <string name="menu_downloads">Materiais</string>
+    <string name="menu_more">Mais</string>
+    <string name="news_image_header">Imagem de cabeçalho da notícia</string>
+</resources>
