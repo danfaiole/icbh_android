@@ -2,6 +2,7 @@ package fms.android.icbh.Adapters
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,7 +34,8 @@ class NewsListAdapter(val context: Context, val newsArray: ArrayList<News>): Rec
 
         fun bindNews(context: Context, newsItem: News) {
             newsTitleText.text = newsItem.title
-            newsBodyText.text = newsItem.newsBody
+            newsBodyText.text = newsItem.body
+            Log.d("LIST ADAPTER", newsItem.title_image)
         }
     }
 }
