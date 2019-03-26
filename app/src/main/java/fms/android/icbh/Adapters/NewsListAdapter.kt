@@ -19,8 +19,8 @@ class NewsListAdapter(val context: Context, val newsArray: ArrayList<News>): Rec
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.bindNews(context, newsArray[position])
     }
 
     override fun getItemCount(): Int {
@@ -28,7 +28,7 @@ class NewsListAdapter(val context: Context, val newsArray: ArrayList<News>): Rec
     }
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        val newsImage = itemView.findViewById<ImageView>(R.id.newsImage)
+//        val newsImage = itemView.findViewById<ImageView>(R.id.newsImage)
         val newsTitleText = itemView.findViewById<TextView>(R.id.newsTitleText)
         val newsBodyText = itemView.findViewById<TextView>(R.id.newsBodyText)
 
