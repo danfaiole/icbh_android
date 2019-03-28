@@ -1,4 +1,4 @@
-package fms.android.icbh
+package fms.android.icbh.Controller
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import fms.android.icbh.Adapters.NewsListAdapter
 import fms.android.icbh.Model.News
+import fms.android.icbh.R
 import fms.android.icbh.Utilities.RetrofitConfig
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
@@ -48,13 +49,13 @@ class MainActivity : AppCompatActivity() {
                         loadRecyclerNewsList(newsList)
                     }
                 } else {
-                    Log.e("REQUEST", response.code().toString())
+                    Log.e("REQUEST SUCCESS", response.code().toString())
                 }
 
             }
 
             override fun onFailure(call: Call<ArrayList<News>?>, t: Throwable) {
-                Log.e("REQUEST", t.localizedMessage)
+                Log.e("REQUEST FAIL", t.localizedMessage)
             }
         })
 
