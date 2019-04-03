@@ -8,6 +8,7 @@ import android.util.Log
 import fms.android.icbh.Adapters.NewsListAdapter
 import fms.android.icbh.Model.News
 import fms.android.icbh.R
+import fms.android.icbh.Utilities.MenuNavigation
 import fms.android.icbh.Utilities.RetrofitConfig
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
@@ -38,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+        navigation.setOnNavigationItemSelectedListener(MenuNavigation.loadMenu())
 
         val request = RetrofitConfig().newsService().index()
         request.enqueue(object : Callback<ArrayList<News>?> {
