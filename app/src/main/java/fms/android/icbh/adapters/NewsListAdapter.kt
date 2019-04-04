@@ -6,7 +6,9 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
+import com.squareup.picasso.Picasso
 import fms.android.icbh.models.News
 import fms.android.icbh.R
 
@@ -27,14 +29,14 @@ class NewsListAdapter(private val context: Context, private val newsArray: Array
     }
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-//        val newsImage = itemView.findViewById<ImageView>(R.id.newsImage)
+        private val newsImage: ImageView = itemView.findViewById(R.id.img_news_header)
         private val newsTitleText: TextView = itemView.findViewById(R.id.text_news_title)
         private val newsBodyText: TextView = itemView.findViewById(R.id.text_news_body)
 
         fun bindNews(context: Context, newsItem: News) {
             newsTitleText.text = newsItem.title
             newsBodyText.text = newsItem.body
-            Log.d("LIST ADAPTER", newsItem.title_image)
+            Picasso.get().load(newsItem.title_image).into(newsImage)
         }
     }
 }
