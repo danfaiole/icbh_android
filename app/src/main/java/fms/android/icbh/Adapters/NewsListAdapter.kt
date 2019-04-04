@@ -28,8 +28,8 @@ class NewsListAdapter(val context: Context, val newsArray: ArrayList<News>): Rec
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 //        val newsImage = itemView.findViewById<ImageView>(R.id.newsImage)
-        val newsTitleText = itemView.findViewById<TextView>(R.id.text_news_title)
-        val newsBodyText = itemView.findViewById<TextView>(R.id.text_news_body)
+        private val newsTitleText: TextView = itemView.findViewById(R.id.text_news_title)
+        private val newsBodyText: TextView = itemView.findViewById(R.id.text_news_body)
 
         fun bindNews(context: Context, newsItem: News) {
             newsTitleText.text = newsItem.title
