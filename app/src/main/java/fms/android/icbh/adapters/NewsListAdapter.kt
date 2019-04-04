@@ -1,4 +1,4 @@
-package fms.android.icbh.Adapters
+package fms.android.icbh.adapters
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -7,10 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import fms.android.icbh.Model.News
+import fms.android.icbh.models.News
 import fms.android.icbh.R
 
-class NewsListAdapter(val context: Context, val newsArray: ArrayList<News>): RecyclerView.Adapter<NewsListAdapter.ViewHolder>() {
+class NewsListAdapter(private val context: Context, private val newsArray: ArrayList<News>): RecyclerView.Adapter<NewsListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, position: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.list_view_news, parent, false)

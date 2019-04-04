@@ -1,4 +1,4 @@
-package fms.android.icbh.Model
+package fms.android.icbh.models
 
 class News(
     val id: Int, val title: String, val body: String,

@@ -1,14 +1,14 @@
-package fms.android.icbh.Controller
+package fms.android.icbh.activities
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
-import fms.android.icbh.Adapters.NewsListAdapter
-import fms.android.icbh.Model.News
+import fms.android.icbh.adapters.NewsListAdapter
+import fms.android.icbh.models.News
 import fms.android.icbh.R
-import fms.android.icbh.Utilities.MenuNavigation
-import fms.android.icbh.Utilities.RetrofitConfig
+import fms.android.icbh.utilities.MenuNavigation
+import fms.android.icbh.utilities.RetrofitConfig
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback

@@ -1,4 +1,4 @@
-package fms.android.icbh.Utilities
+package fms.android.icbh.utilities
 
 import android.support.design.widget.BottomNavigationView
 import fms.android.icbh.R

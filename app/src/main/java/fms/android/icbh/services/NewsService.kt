@@ -1,6 +1,6 @@
-package fms.android.icbh.Services
+package fms.android.icbh.services
 
-import fms.android.icbh.Model.News
+import fms.android.icbh.models.News
 import retrofit2.Call
 import retrofit2.http.GET
 

@@ -1,9 +1,9 @@
-package fms.android.icbh.Controller
+package fms.android.icbh.activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import fms.android.icbh.R
-import fms.android.icbh.Utilities.MenuNavigation
+import fms.android.icbh.utilities.MenuNavigation
 import kotlinx.android.synthetic.main.activity_main.*
 
 class VideosActivity : AppCompatActivity() {

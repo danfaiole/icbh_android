@@ -1,6 +1,6 @@
-package fms.android.icbh.Utilities
+package fms.android.icbh.utilities
 
-import fms.android.icbh.Services.NewsService
+import fms.android.icbh.services.NewsService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
