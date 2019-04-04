@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        navigation.setOnNavigationItemSelectedListener(MenuNavigation.loadMenu())
+        menu_navigation.setOnNavigationItemSelectedListener(MenuNavigation.loadMenu())
 
         val request = RetrofitConfig().newsService().index()
         request.enqueue(object : Callback<ArrayList<News>?> {

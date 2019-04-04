@@ -12,6 +12,6 @@ class VideosActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_videos)
 
-        navigation.setOnNavigationItemSelectedListener(MenuNavigation.loadMenu())
+        menu_navigation.setOnNavigationItemSelectedListener(MenuNavigation.loadMenu())
     }
 }
