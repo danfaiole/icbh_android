@@ -1,7 +1,6 @@
 package fms.android.icbh.Controller
 
 import android.os.Bundle
-import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
@@ -46,7 +45,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadRecyclerNewsList(news: ArrayList<News>){
-        val recyclerView = newsRecyclerView
+        val recyclerView = rv_news_list
         recyclerView.adapter = NewsListAdapter(this, news)
 
         val layoutManager = LinearLayoutManager(this)
