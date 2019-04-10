@@ -1,14 +1,24 @@
 package fms.android.icbh.utilities
 
+import android.content.Context
+import android.content.Intent
+import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
+import android.support.v4.content.ContextCompat.startActivity
+import android.util.Log
 import fms.android.icbh.R
+import fms.android.icbh.activities.MainActivity
+import fms.android.icbh.activities.VideosActivity
 
 object MenuNavigation {
-    fun loadMenu() : BottomNavigationView.OnNavigationItemSelectedListener {
+    fun loadMenu(context: Context) : BottomNavigationView.OnNavigationItemSelectedListener {
         return BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_home -> {
-                    println("Menu navigation home clicked")
+//                    Log.d("NOME DA CLASSE JAVA", context.javaClass.simpleName)
+                    val mainActivityIntent : Intent = Intent(context, MainActivity::class.java)
+                    goToActivity(context, mainActivityIntent, null, "MainActivity")
+
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.navigation_schedule -> {
@@ -16,7 +26,9 @@ object MenuNavigation {
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.navigation_videos -> {
-                    println("Menu navigation videos clicked")
+                    val videosActivityIntent : Intent = Intent(context, VideosActivity::class.java)
+                    goToActivity(context, videosActivityIntent, null, "VideosActivity")
+
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.navigation_downloads -> {
@@ -31,6 +43,12 @@ object MenuNavigation {
                     return@OnNavigationItemSelectedListener false
                 }
             }
+        }
+    }
+
+    private fun goToActivity(context : Context, intent : Intent, options : Bundle?, className : String) {
+        if (context.javaClass.simpleName != className) {
+            startActivity(context, intent, options)
         }
     }
 }

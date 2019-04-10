@@ -21,7 +21,7 @@ class NewsListAdapter(private val context: Context, private val newsArray: Array
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindNews(context, newsArray[position])
+        holder.bindNews(newsArray[position])
     }
 
     override fun getItemCount(): Int {
@@ -33,10 +33,13 @@ class NewsListAdapter(private val context: Context, private val newsArray: Array
         private val newsTitleText: TextView = itemView.findViewById(R.id.text_news_title)
         private val newsBodyText: TextView = itemView.findViewById(R.id.text_news_body)
 
-        fun bindNews(context: Context, newsItem: News) {
+        fun bindNews(newsItem: News) {
             newsTitleText.text = newsItem.title
             newsBodyText.text = newsItem.body
-            Picasso.get().load(newsItem.title_image).into(newsImage)
+            Picasso.get()
+                .load(newsItem.title_image)
+                .placeholder(R.drawable.ic_images_black)
+                .into(newsImage)
         }
     }
 }

@@ -19,15 +19,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        menu_navigation.setOnNavigationItemSelectedListener(MenuNavigation.loadMenu())
+        Log.d("ON CREATE", "NOVA MAIN ACTIVITY")
+        menu_navigation.setOnNavigationItemSelectedListener(MenuNavigation.loadMenu(this))
 
         val request = RetrofitConfig().newsService().index()
         request.enqueue(object : Callback<ArrayList<News>?> {
             override fun onResponse(call: Call<ArrayList<News>?>, response: Response<ArrayList<News>?>) {
                 if (response.isSuccessful) {
                     response.body()?.let {
-                        val newsList:ArrayList<News> = it
+                        val newsList : ArrayList<News> = it
                         loadRecyclerNewsList(newsList)
                     }
                 } else {
