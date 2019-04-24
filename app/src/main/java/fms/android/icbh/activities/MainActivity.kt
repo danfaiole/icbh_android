@@ -78,10 +78,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadRecyclerNewsList(news: ArrayList<News>){
-        val recyclerView = rv_news_list
-        recyclerView.adapter = NewsListAdapter(this, news)
-
-        val layoutManager = LinearLayoutManager(this)
-        recyclerView.layoutManager = layoutManager
+//        val recyclerView = rv_news_list
+//        recyclerView.adapter = NewsListAdapter(this, news)
+//
+//        val layoutManager = LinearLayoutManager(this)
+//        recyclerView.layoutManager = layoutManager
     }
 }
