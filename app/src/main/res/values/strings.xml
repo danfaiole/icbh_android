@@ -7,4 +7,7 @@
     <string name="menu_more">Mais</string>
     <string name="news_image_header">Imagem de cabeçalho da notícia</string>
     <string name="thumbnail_images">Imagem do item da lista</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
