@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_videos -> {
-                val videosActivityIntent : Intent = Intent(this, VideosActivity::class.java)
+//                val videosActivityIntent : Intent = Intent(this, VideosActivity::class.java)
 
                 return@OnNavigationItemSelectedListener true
             }
